@@ -7,8 +7,10 @@ namespace ListaDeReproduccion_G2_2023_II
     public partial class Form1 : Form
     {
         List<Musica> canciones;
-        public Form1()
+        Form FormPadre; //Atributo que asigna al presente formulario al Form de Autenticación
+        public Form1(Form FormPadre)
         {
+            this.FormPadre = FormPadre;
             InitializeComponent();
             CargarCanciones();
         }
@@ -34,6 +36,11 @@ namespace ListaDeReproduccion_G2_2023_II
             lbCancion.Text = cancion.Cancion;
             lbArtista.Text = cancion.Artista;
             lbAlbum.Text = cancion.Album;
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FormPadre.Close();
         }
     }
 }
