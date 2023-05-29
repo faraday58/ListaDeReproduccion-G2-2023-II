@@ -2,7 +2,7 @@
 
 namespace ListaDeReproduccion_G2_2023_II
 {
-    internal class Musica
+    public class Musica
     {
         #region atributos
         private string artista;

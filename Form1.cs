@@ -42,5 +42,20 @@ namespace ListaDeReproduccion_G2_2023_II
         {
             FormPadre.Close();
         }
+
+        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAgregar formAgregar = new FormAgregar();
+            formAgregar.EnviarMusica += AgregarCancion;
+            formAgregar.ShowDialog();
+        }
+
+        
+
+        public void AgregarCancion(Musica musica)
+        {
+            canciones.Add(musica);
+            lstbReproduccion.Items.Add(musica.Cancion);
+        }
     }
 }
