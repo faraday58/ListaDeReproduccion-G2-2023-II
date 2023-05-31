@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Server;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -8,6 +9,7 @@ namespace ListaDeReproduccion_G2_2023_II
     {
         List<Musica> canciones;
         Form FormPadre; //Atributo que asigna al presente formulario al Form de Autenticación
+        private int tiempoInicio;
         public Form1(Form FormPadre)
         {
             this.FormPadre = FormPadre;
@@ -56,6 +58,29 @@ namespace ListaDeReproduccion_G2_2023_II
         {
             canciones.Add(musica);
             lstbReproduccion.Items.Add(musica.Cancion);
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            lbInicio.Text= String.Format( " {0} [s] ",  tiempoInicio );
+            tiempoInicio++;
+
+        }
+
+        private void reproducirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            timer.Start();
+        }
+
+        private void pausarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            timer.Stop();
+        }
+
+        private void detenerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            timer.Stop();
+            tiempoInicio = 0;
         }
     }
 }

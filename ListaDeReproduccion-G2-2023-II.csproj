@@ -93,5 +93,17 @@
   <ItemGroup>
     <None Include="Resources\simens.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton-de-play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn-play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton-detener.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pausa.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
