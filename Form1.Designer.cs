@@ -42,25 +42,25 @@
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guardarComoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reproducciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reproducirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.detenerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pausarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.lbInicio = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.timer = new System.Windows.Forms.Timer(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.aleatoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.automáticaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.siguienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.anteriorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.guardarComoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.lbInicio = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.ptbPortada = new System.Windows.Forms.PictureBox();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbPortada)).BeginInit();
             this.SuspendLayout();
             // 
             // lstbReproduccion
@@ -184,15 +184,32 @@
             // cargarToolStripMenuItem
             // 
             this.cargarToolStripMenuItem.Name = "cargarToolStripMenuItem";
-            this.cargarToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.cargarToolStripMenuItem.Size = new System.Drawing.Size(240, 34);
             this.cargarToolStripMenuItem.Text = "Cargar";
             // 
             // agregarToolStripMenuItem
             // 
             this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(240, 34);
             this.agregarToolStripMenuItem.Text = "Agregar";
             this.agregarToolStripMenuItem.Click += new System.EventHandler(this.agregarToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(237, 6);
+            // 
+            // guardarToolStripMenuItem
+            // 
+            this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(240, 34);
+            this.guardarToolStripMenuItem.Text = "Guardar";
+            // 
+            // guardarComoToolStripMenuItem
+            // 
+            this.guardarComoToolStripMenuItem.Name = "guardarComoToolStripMenuItem";
+            this.guardarComoToolStripMenuItem.Size = new System.Drawing.Size(240, 34);
+            this.guardarComoToolStripMenuItem.Text = "Guardar como...";
             // 
             // reproducciónToolStripMenuItem
             // 
@@ -213,7 +230,7 @@
             // 
             this.reproducirToolStripMenuItem.Image = global::ListaDeReproduccion_G2_2023_II.Properties.Resources.btn_play;
             this.reproducirToolStripMenuItem.Name = "reproducirToolStripMenuItem";
-            this.reproducirToolStripMenuItem.Size = new System.Drawing.Size(274, 38);
+            this.reproducirToolStripMenuItem.Size = new System.Drawing.Size(202, 34);
             this.reproducirToolStripMenuItem.Text = "Reproducir";
             this.reproducirToolStripMenuItem.Click += new System.EventHandler(this.reproducirToolStripMenuItem_Click);
             // 
@@ -221,7 +238,7 @@
             // 
             this.detenerToolStripMenuItem.Image = global::ListaDeReproduccion_G2_2023_II.Properties.Resources.boton_detener;
             this.detenerToolStripMenuItem.Name = "detenerToolStripMenuItem";
-            this.detenerToolStripMenuItem.Size = new System.Drawing.Size(274, 38);
+            this.detenerToolStripMenuItem.Size = new System.Drawing.Size(202, 34);
             this.detenerToolStripMenuItem.Text = "Detener";
             this.detenerToolStripMenuItem.Click += new System.EventHandler(this.detenerToolStripMenuItem_Click);
             // 
@@ -229,9 +246,38 @@
             // 
             this.pausarToolStripMenuItem.Image = global::ListaDeReproduccion_G2_2023_II.Properties.Resources.pausa;
             this.pausarToolStripMenuItem.Name = "pausarToolStripMenuItem";
-            this.pausarToolStripMenuItem.Size = new System.Drawing.Size(274, 38);
+            this.pausarToolStripMenuItem.Size = new System.Drawing.Size(202, 34);
             this.pausarToolStripMenuItem.Text = "Pausar";
             this.pausarToolStripMenuItem.Click += new System.EventHandler(this.pausarToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(199, 6);
+            // 
+            // aleatoriaToolStripMenuItem
+            // 
+            this.aleatoriaToolStripMenuItem.Name = "aleatoriaToolStripMenuItem";
+            this.aleatoriaToolStripMenuItem.Size = new System.Drawing.Size(202, 34);
+            this.aleatoriaToolStripMenuItem.Text = "aleatoria";
+            // 
+            // automáticaToolStripMenuItem
+            // 
+            this.automáticaToolStripMenuItem.Name = "automáticaToolStripMenuItem";
+            this.automáticaToolStripMenuItem.Size = new System.Drawing.Size(202, 34);
+            this.automáticaToolStripMenuItem.Text = "automática";
+            // 
+            // siguienteToolStripMenuItem
+            // 
+            this.siguienteToolStripMenuItem.Name = "siguienteToolStripMenuItem";
+            this.siguienteToolStripMenuItem.Size = new System.Drawing.Size(202, 34);
+            this.siguienteToolStripMenuItem.Text = "siguiente";
+            // 
+            // anteriorToolStripMenuItem
+            // 
+            this.anteriorToolStripMenuItem.Name = "anteriorToolStripMenuItem";
+            this.anteriorToolStripMenuItem.Size = new System.Drawing.Size(202, 34);
+            this.anteriorToolStripMenuItem.Text = "anterior";
             // 
             // progressBar1
             // 
@@ -263,67 +309,21 @@
             this.label9.TabIndex = 1;
             this.label9.Text = "5 [s]";
             // 
-            // pictureBox1
+            // ptbPortada
             // 
-            this.pictureBox1.Image = global::ListaDeReproduccion_G2_2023_II.Properties.Resources.simens;
-            this.pictureBox1.Location = new System.Drawing.Point(764, 143);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(195, 180);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.ptbPortada.Image = global::ListaDeReproduccion_G2_2023_II.Properties.Resources.luismiguel;
+            this.ptbPortada.Location = new System.Drawing.Point(764, 143);
+            this.ptbPortada.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ptbPortada.Name = "ptbPortada";
+            this.ptbPortada.Size = new System.Drawing.Size(195, 180);
+            this.ptbPortada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbPortada.TabIndex = 4;
+            this.ptbPortada.TabStop = false;
             // 
             // timer
             // 
             this.timer.Interval = 1000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(271, 6);
-            // 
-            // aleatoriaToolStripMenuItem
-            // 
-            this.aleatoriaToolStripMenuItem.Name = "aleatoriaToolStripMenuItem";
-            this.aleatoriaToolStripMenuItem.Size = new System.Drawing.Size(274, 38);
-            this.aleatoriaToolStripMenuItem.Text = "aleatoria";
-            // 
-            // automáticaToolStripMenuItem
-            // 
-            this.automáticaToolStripMenuItem.Name = "automáticaToolStripMenuItem";
-            this.automáticaToolStripMenuItem.Size = new System.Drawing.Size(274, 38);
-            this.automáticaToolStripMenuItem.Text = "automática";
-            // 
-            // siguienteToolStripMenuItem
-            // 
-            this.siguienteToolStripMenuItem.Name = "siguienteToolStripMenuItem";
-            this.siguienteToolStripMenuItem.Size = new System.Drawing.Size(274, 38);
-            this.siguienteToolStripMenuItem.Text = "siguiente";
-            // 
-            // anteriorToolStripMenuItem
-            // 
-            this.anteriorToolStripMenuItem.Name = "anteriorToolStripMenuItem";
-            this.anteriorToolStripMenuItem.Size = new System.Drawing.Size(274, 38);
-            this.anteriorToolStripMenuItem.Text = "anterior";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(267, 6);
-            // 
-            // guardarToolStripMenuItem
-            // 
-            this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.guardarToolStripMenuItem.Text = "Guardar";
-            // 
-            // guardarComoToolStripMenuItem
-            // 
-            this.guardarComoToolStripMenuItem.Name = "guardarComoToolStripMenuItem";
-            this.guardarComoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.guardarComoToolStripMenuItem.Text = "Guardar como...";
             // 
             // Form1
             // 
@@ -331,7 +331,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(1201, 514);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ptbPortada);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.lbInicio);
             this.Controls.Add(this.label9);
@@ -352,7 +352,7 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbPortada)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -378,7 +378,7 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label lbInicio;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ptbPortada;
         private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;

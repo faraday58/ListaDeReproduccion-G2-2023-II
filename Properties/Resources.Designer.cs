@@ -93,9 +93,29 @@ namespace ListaDeReproduccion_G2_2023_II.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap luismiguel {
+            get {
+                object obj = ResourceManager.GetObject("luismiguel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pausa {
             get {
                 object obj = ResourceManager.GetObject("pausa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ravenhead {
+            get {
+                object obj = ResourceManager.GetObject("ravenhead", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

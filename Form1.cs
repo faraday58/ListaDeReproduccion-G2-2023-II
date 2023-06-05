@@ -1,6 +1,7 @@
 ﻿using Microsoft.SqlServer.Server;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Windows.Forms;
 
 namespace ListaDeReproduccion_G2_2023_II
@@ -10,6 +11,23 @@ namespace ListaDeReproduccion_G2_2023_II
         List<Musica> canciones;
         Form FormPadre; //Atributo que asigna al presente formulario al Form de Autenticación
         private int tiempoInicio;
+        private int indCan;
+
+        public int IndCan { get => indCan;
+            set
+            {
+                if( indCan < 0 && indCan > lstbReproduccion.Items.Count    )
+                {
+                    indCan = 0;
+                }
+                else
+                {
+                    indCan = value;
+                }
+                
+            }
+        }
+
         public Form1(Form FormPadre)
         {
             this.FormPadre = FormPadre;
@@ -63,6 +81,30 @@ namespace ListaDeReproduccion_G2_2023_II
         private void timer_Tick(object sender, EventArgs e)
         {
             lbInicio.Text= String.Format( " {0} [s] ",  tiempoInicio );
+             
+            switch(IndCan)
+            {
+                case 0:
+                    ptbPortada.Image = global::ListaDeReproduccion_G2_2023_II.Properties.Resources.simens;
+                    break;
+                case 1:
+                    ptbPortada.Image = global::ListaDeReproduccion_G2_2023_II.Properties.Resources.luismiguel;
+                    break;
+                case 2:
+                    ptbPortada.Image = global::ListaDeReproduccion_G2_2023_II.Properties.Resources.ravenhead;
+                    break;
+                   
+            }
+            if ( lstbReproduccion.SelectedIndex >= 0 && lstbReproduccion.SelectedIndex < lstbReproduccion.Items.Count-1)
+            {
+
+                IndCan= lstbReproduccion.SelectedIndex++;
+            }
+            else
+            {
+                lstbReproduccion.SelectedIndex = 0;
+            }
+
             tiempoInicio++;
 
         }
