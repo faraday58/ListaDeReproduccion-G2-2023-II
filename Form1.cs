@@ -1,7 +1,6 @@
-﻿using Microsoft.SqlServer.Server;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq.Expressions;
+using System.IO;
 using System.Windows.Forms;
 
 namespace ListaDeReproduccion_G2_2023_II
@@ -12,6 +11,7 @@ namespace ListaDeReproduccion_G2_2023_II
         Form FormPadre; //Atributo que asigna al presente formulario al Form de Autenticación
         private int tiempoInicio;
         private int indCan;
+        private StreamWriter sw;
 
         public int IndCan { get => indCan;
             set
@@ -123,6 +123,41 @@ namespace ListaDeReproduccion_G2_2023_II
         {
             timer.Stop();
             tiempoInicio = 0;
+        }
+
+        private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Creando cuadro de dialogo
+            SaveFileDialog sf = new SaveFileDialog(); ;
+            sf.Filter = "*.txt|.txt";
+           
+            try
+            {
+                //Invocando cuadro de dialogo
+                if( sf.ShowDialog() == DialogResult.OK )
+                {
+                    sw = new StreamWriter(sf.FileName);
+                    sw.WriteLine("**Nombre Canción**");
+                    foreach(string nombre in lstbReproduccion.Items  )
+                    {
+                        sw.WriteLine(nombre);
+                    }
+                }            
+
+
+            }
+            catch(IOException error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
+            finally
+            {
+                if( sw != null)
+                   sw.Close();
+                
+            }
+
+
         }
     }
 }
